@@ -9,22 +9,20 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
-                        <div class="float-left">
+                    <div class="card-header text-white" style="background-color: #778899;">
+                        <div>
                             <span class="card-title">Show Dependencia</span>
-                        </div>
-                        <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('dependencias.index') }}"> Back</a>
                         </div>
                     </div>
 
                     <div class="card-body">
-                        
                         <div class="form-group">
                             <strong>Dependencias:</strong>
                             {{ $dependencia->dependencias }}
                         </div>
-
+                        <div>
+                            <a class="btn btn-success my-2" href="{{ route('dependencias.index') }}">Volver</a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header text-white" style="background-color: #778899;">
                         <div class="float-left">
                             <span class="card-title">Show Caratula</span>
                         </div>
