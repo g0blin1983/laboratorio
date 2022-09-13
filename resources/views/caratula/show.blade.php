@@ -9,22 +9,21 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header text-white" style="background-color: #778899;">
                         <div class="float-left">
-                            <span class="card-title">Show Caratula</span>
-                        </div>
-                        <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('caratulas.index') }}"> Back</a>
+                            <span class="card-title">Detalle de Caratula</span>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Caratulas:</strong>
+                            <strong>Caratulas: </strong>
                             {{ $caratula->caratulas }}
                         </div>
-
+                        <div>
+                            <a class="btn btn-success my-2" href="{{ route('caratulas.index') }}">Volver</a>
+                        </div>
                     </div>
                 </div>
             </div>

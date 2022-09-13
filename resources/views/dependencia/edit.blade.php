@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Update Dependencia
+Actualizar dependencia
 @endsection
 
 @section('content')
@@ -12,8 +12,8 @@
                 @includeif('partials.errors')
 
                 <div class="card card-default">
-                    <div class="card-header">
-                        <span class="card-title">Update Dependencia</span>
+                    <div class="card-header text-white" style="background-color: #778899;">
+                        <span class="card-title">Actualizar dependencia</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('dependencias.update', $dependencia->id) }}"  role="form" enctype="multipart/form-data">

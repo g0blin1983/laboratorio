@@ -12,7 +12,7 @@
                 @includeif('partials.errors')
 
                 <div class="card card-default">
-                    <div class="card-header">
+                    <div class="card-header text-white" style="background-color: #778899;">
                         <span class="card-title">Create Dependencia</span>
                     </div>
                     <div class="card-body">

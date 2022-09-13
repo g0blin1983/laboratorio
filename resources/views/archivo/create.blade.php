@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Create Archivo
+    Crear Archivo
 @endsection
 
 @section('content')
@@ -12,8 +12,8 @@
                 @includeif('partials.errors')
 
                 <div class="card card-default">
-                    <div class="card-header">
-                        <span class="card-title">Create Archivo</span>
+                    <div class="card-header text-white" style="background-color: #778899;">
+                        <span class="card-title">Crear nuevo archivo</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('archivos.store') }}"  role="form" enctype="multipart/form-data">

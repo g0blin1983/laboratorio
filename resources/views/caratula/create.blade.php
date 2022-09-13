@@ -12,8 +12,8 @@
                 @includeif('partials.errors')
 
                 <div class="card card-default">
-                    <div class="card-header">
-                        <span class="card-title">Create Caratula</span>
+                    <div class="card-header text-white" style="background-color: #778899;">
+                        <span class="card-title">Crear Caratula</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('caratulas.store') }}"  role="form" enctype="multipart/form-data">
