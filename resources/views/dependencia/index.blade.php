@@ -50,11 +50,11 @@
 
                                             <td>
                                                 <form action="{{ route('dependencias.destroy',$dependencia->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('dependencias.show',$dependencia->id) }}">Show</a>
-                                                    <a class="btn btn-sm btn-secondary" href="{{ route('dependencias.edit',$dependencia->id) }}">Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('dependencias.show',$dependencia->id) }}">Detalle</a>
+                                                    <a class="btn btn-sm btn-secondary" href="{{ route('dependencias.edit',$dependencia->id) }}">Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-dark btn-sm">Delete</button>
+                                                    <button type="submit" class="btn btn-dark btn-sm">Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>

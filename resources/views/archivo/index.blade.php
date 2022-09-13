@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header text-white" style="background-color: #778899;">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
@@ -17,8 +17,8 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('archivos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                <a href="{{ route('archivos.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
+                                  {{ __('Nuevo archivo') }}
                                 </a>
                               </div>
                         </div>
@@ -34,13 +34,13 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>#</th>
                                         
-										<th>Numero Archivo</th>
+										<th>N° Archivo</th>
 										<th>Fecha Ingreso</th>
-										<th>Caratulas Id</th>
+										<th>Caratulada</th>
 										<th>Calles</th>
-										<th>Depedencias Id</th>
+										<th>Depedencia</th>
 										<th>Respuesta</th>
 										<th>Fecha Salida</th>
 										<th>Description</th>
@@ -64,11 +64,11 @@
 
                                             <td>
                                                 <form action="{{ route('archivos.destroy',$archivo->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('archivos.show',$archivo->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('archivos.edit',$archivo->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('archivos.show',$archivo->id) }}"><i class="fa fa-fw fa-eye"></i> Detalle </a>
+                                                    <a class="btn btn-sm btn-secondary" href="{{ route('archivos.edit',$archivo->id) }}"><i class="fa fa-fw fa-edit"></i> Editar </a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-dark btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar </button>
                                                 </form>
                                             </td>
                                         </tr>

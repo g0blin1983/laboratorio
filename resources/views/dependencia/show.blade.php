@@ -11,13 +11,13 @@
                 <div class="card">
                     <div class="card-header text-white" style="background-color: #778899;">
                         <div>
-                            <span class="card-title">Show Dependencia</span>
+                            <span class="card-title">Detalle de Dependencia</span>
                         </div>
                     </div>
 
                     <div class="card-body">
                         <div class="form-group">
-                            <strong>Dependencias:</strong>
+                            <strong>Dependencias: </strong>
                             {{ $dependencia->dependencias }}
                         </div>
                         <div>
