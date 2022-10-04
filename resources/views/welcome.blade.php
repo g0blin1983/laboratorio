@@ -9,6 +9,7 @@
         </div>
         <div class="row text-center">
             <h1>Subsecretaria de Seguridad y Justicia.</h1>
+            <h3>Laboratorio Judicial de Imagenes y Estadisticas.</h3>
         </div>
     </div>
 </div>

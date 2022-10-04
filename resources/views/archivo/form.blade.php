@@ -11,20 +11,36 @@
             {{ Form::date('fecha_ingreso', $archivo->fecha_ingreso, ['class' => 'form-control' . ($errors->has('fecha_ingreso') ? ' is-invalid' : ''), 'placeholder' => 'Fecha Ingreso']) }}
             {!! $errors->first('fecha_ingreso', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        <div class="form-group">
-            {{ Form::label('caratulas_id') }}
-            {{ Form::select('caratulas_id', $caratulas , ['class' => 'form-select' . ($errors->has('caratulas_id') ? ' is-invalid' : ''), 'placeholder' => 'Caratulas Id']) }}
+{{--         <div class="form-group">
+            {{ Form::label('Caratulas') }}
+            {{ Form::select('caratulas_id', $caratulas , ['class' => 'form-control'/*  . ($errors->has('caratulas_id') ? ' is-invalid' : ''), 'placeholder' => 'Caratulas Id' */]) }}
             {!! $errors->first('caratulas_id', '<div class="invalid-feedback">:message</div>') !!}
+        </div> --}}
+        <div class="form-group">
+        <label for="caratulas_id" class="form-label">Caratula</label>
+            <select class="form-control form-control-sm|form-control-lg" name="caratulas_id" id="caratulas_id">
+                @foreach ($caratulas as $caratula)
+                    <option value="{{ $caratula->id }}">{{ $caratula->caratulas }}</option>    
+                @endforeach
+            </select>
         </div>
         <div class="form-group">
             {{ Form::label('calles') }}
             {{ Form::text('calles', $archivo->calles, ['class' => 'form-control' . ($errors->has('calles') ? ' is-invalid' : ''), 'placeholder' => 'Calles']) }}
             {!! $errors->first('calles', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        <div class="form-group">
+{{--         <div class="form-group">
             {{ Form::label('depedencias_id') }}
             {{ Form::select('depedencias_id', $dependencias , ['class' => 'form-control' . ($errors->has('depedencias_id') ? ' is-invalid' : ''), 'placeholder' => 'Depedencias Id']) }}
             {!! $errors->first('depedencias_id', '<div class="invalid-feedback">:message</div>') !!}
+        </div> --}}
+        <div class="form-group">
+          <label for="dependencias_id" class="form-label">Dependencias</label>
+          <select class="form-control form-control-sm|form-control-lg" name="dependencias_id" id="dependencias_id">
+            @foreach ($dependencias as $dependencia)
+            <option value="{{ $dependencia->id }}">{{ $dependencia->dependencias }}</option>
+            @endforeach
+          </select>
         </div>
         <div class="form-group">
             {{ Form::label('respuesta') }}
@@ -44,6 +60,6 @@
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-success my-2">Aceptar</button>
     </div>
 </div>

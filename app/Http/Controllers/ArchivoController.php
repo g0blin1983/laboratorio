@@ -34,8 +34,10 @@ class ArchivoController extends Controller
     public function create()
     {
         $archivo = new Archivo();
-        $caratulas = Caratula::pluck('caratulas','Id');
-        $dependencias = Dependencia::pluck('dependencias','Id');
+/*         $caratulas = Caratula::pluck('caratulas','Id');
+        $dependencias = Dependencia::pluck('dependencias','Id'); */
+        $caratulas = Caratula::all();
+        $dependencias = Dependencia::all();
 
         return view('archivo.create', compact('archivo','caratulas','dependencias'));
     }
@@ -78,8 +80,10 @@ class ArchivoController extends Controller
     public function edit($id)
     {
         $archivo = Archivo::find($id);
+        $caratulas = Caratula::all();
+        $dependencias = Dependencia::all();
 
-        return view('archivo.edit', compact('archivo'));
+        return view('archivo.edit', compact('archivo','caratulas','dependencias'));
     }
 
     /**
